@@ -63,7 +63,17 @@ const movie = movies.find(movie => { // iterates elements in movies
 
 // You can use .slice() method to make a new array from an already set array without copying the reference
 
-const anArray = ["thing1", "thing2", "thing3", "thing4"]
+const anArray = ["thing1", "thing2", "thing3", "thing4"];
 
 let newArray = anArray // -> newArray will continue to point to anArray as reference
 let brandSpankinNewArray = anArray.splice() // creates a new array with all the same elements as anArray, but without copying it as a reference
+
+// .some, .every && .filter
+
+let anArray = ["thing1", "thing2", "thing3", "thing4"];
+
+anArray.some((n)=>{n[0] === "t"}) // iterates through array, returns boolean of true if any element in the array meets the test case, or false if none do
+anArray.every((n)=>{n[0] === "t"}) // the same, however every element must meet the test case to return true, else false
+
+anArray.filter((n) => {n === "thing1"}) // will make a new array, filtering from the old array based on boolean response of test case
+// expected result anArray = ["thing1"]
