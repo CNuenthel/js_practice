@@ -61,3 +61,9 @@ const movie = movies.find(movie => { // iterates elements in movies
     return movie.includes("mrs"); // returns first element that contains includes param
 })
 
+// You can use .slice() method to make a new array from an already set array without copying the reference
+
+const anArray = ["thing1", "thing2", "thing3", "thing4"]
+
+let newArray = anArray // -> newArray will continue to point to anArray as reference
+let brandSpankinNewArray = anArray.splice() // creates a new array with all the same elements as anArray, but without copying it as a reference
